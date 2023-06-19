@@ -1,0 +1,127 @@
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+html {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+li,
+figure,
+figcaption {
+  font-family: "Montserrat", serif;
+}
+p {
+  font-size: 14px;
+  color: var(--grayish-blue);
+  line-height: 2em;
+  margin: 0;
+}
+button {
+  outline: 0px;
+  border: 0px;
+  width: 100%;
+  background-color: var(--Dark-cyan);
+  padding: 15px 0px;
+  color: #fff;
+  font-family: "Montserrat", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  gap: 10px;
+  margin-top: 10px;
+}
+button:hover {
+  cursor: pointer;
+  background-color: hsl(156, 42%, 18%);
+}
+main {
+  min-height: 100vh;
+  background-color: var(--Cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-container {
+  position: relative;
+  height: 450px;
+  width: 600px;
+  background-color: var(--White);
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+.image {
+  position: relative;
+  background-image: url(./images/image-product-desktop.jpg);
+  flex: 1;
+  background-size: cover;
+}
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  top: 0;
+  left: 0;
+}
+.description-container {
+  flex: 1;
+  padding: 20px 20px;
+  position: relative;
+  box-sizing: border-box;
+}
+.desc-title {
+  letter-spacing: 5px;
+}
+.discounted {
+  color: var(--Dark-cyan);
+  display: inline-block;
+}
+.discount {
+  vertical-align: super;
+  color: var(--grayish-blue);
+  text-decoration: line-through;
+  margin-left: 10px;
+}
+h1 {
+  font-family: "Fraunces", serif;
+  color: var(--Very-dark-blue);
+}
+.none {
+  display: none;
+}
+@media only Screen and (max-width: 789px) {
+    .card-container{
+        flex-direction: column;
+        margin: 10px;
+        height: 700px;
+    }
+    .image{
+        background-image: url(./images/image-product-mobile.jpg);
+    }
+    p{
+        padding-right: 20px !important;
+    }
+    h1{
+        padding-right: 50px !important;
+    }
+}
